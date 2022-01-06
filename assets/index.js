@@ -58,6 +58,13 @@ teclas.forEach(tecla => {
                 actualizarDisplay(operador);
                 console.log("+");
             }
+            if(operador == "/"){
+                acumularNumeros(acumulador);
+                acumularOperador(operador);
+                purgarAcumulador()
+                actualizarDisplay(operador);
+                console.log("/");
+            }
 
             if(operador == "="){ //Igualar
 
@@ -74,7 +81,6 @@ teclas.forEach(tecla => {
 
             if(operador == ","){
                 actualizarDisplay("Work in progress");
-
             }
                             
         });
@@ -125,6 +131,10 @@ function calculaResultado(operaciones){
         }
         console.log(op1 + " " + oper + " " + op2);
         // Hacer operación
+        if(oper === "/"){ //Multiplicar
+            resultado = op1 / op2;
+        }
+
         if(oper === "X"){ //Multiplicar
             resultado = op1 * op2;
         }

@@ -87,3 +87,13 @@ div > .csh1, div > .csres {
     border-radius: 0 0 0 15px;
 }
 
+
+
+
+@media only screen and (max-width: 450px){
+    #container{
+        width: calc(100% / 1.2);
+    }
+}
+
+
